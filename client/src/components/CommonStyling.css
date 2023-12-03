@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap');
+
+.movie-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  height: 59.1vh;
+}
+
+.movie-card {
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+}
+
+.movie-poster {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.movie-info {
+  margin-top: 10px;
+}
+
+.movie-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+
+.movie-rating {
+  font-size: 14px;
+  color: #333;
+}
+
+.LinkStyle {
+  text-decoration: none; 
+  color: inherit; 
+}
+
+.banner-image {
+  width: 100%;
+  height: 300px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  display: block;
+}
+
+.banner-info {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner-rating {
+  font-size: 16px;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+
+.banner-description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+}
+
+.movie-title {
+  margin: auto;
+  font-size: 24px;
+  color: #333;
+  text-decoration: none;
+}
+
+.rating {
+  color: #333;
+  font-size: 16px;
+}
+
+.title {
+  text-align: center;
+  font-family: 'Holtwood One SC', sans-serif;
+  color: #400303;
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  background-image: url(../imgs/Background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+.movie-cards-container .movie-card {
+  border: none; 
+}
+
+button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #EFB06F;
+  margin-top: 150px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: gray;
+}
+
+.nav-container {
+  background-color: #EFB06F;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin: 0 auto; 
+}
+
+.nav-left,
+.nav-right {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0%;
+}
+
+.nav-link {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -5px;
+  border-right: 1px solid #333;
+  left: 52.5px;
+}
+
+.nav-link:last-child::after {
+  display: none;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.movie-card-reviews {
+  margin:0;
+  padding:0;
+}
+
+.buttonReview {
+  display: flex;
+  justify-content: space-between;
+}
+
+.review {
+  margin:0;
+  padding:0;
+}
+
+.addReview{
+  padding:0%;
+  margin: 0;
+}
+
+.addForm {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.formviewButton {
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  margin: 0;
+  padding: 0;
+  height: 120vh;
+}
+
+.moviePage {
+  margin: 0;
+  padding: 0;
+  max-width: 200px;
+}
