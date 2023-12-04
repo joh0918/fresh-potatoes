@@ -12,7 +12,7 @@ const MovieBanner = ({ movie }) => {
     <div className="movie-banner">
       <img 
         className="banner-image"
-        src={movie.posterURL}
+        src={movie.imgURL}
         alt={movie.title} 
       />
 

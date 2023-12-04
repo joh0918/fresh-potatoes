@@ -11,6 +11,9 @@ const MovieSchema = new mongoose.Schema({
     rating: {
         type: String,
     },
+    isTopRating: {
+        type: Boolean,
+    },
     updated_date: {
         type: Date,
         default: Date.now

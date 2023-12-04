@@ -5,7 +5,6 @@ import './CommonStyling.css';
 const MovieCard = ({ movie }) => {
  
   const handleMovieClick = () => {
-    // Replace this example logic with the actual functionality to navigate to the movie page
     console.log(`Clicked on ${movie.title}`); // Example: Output the movie title on click
   };
 
@@ -14,7 +13,7 @@ const MovieCard = ({ movie }) => {
       <div className="movie-card">
         <img
           className="movie-poster"
-          src={movie.posterURL} 
+          src={movie.imgURL} 
           alt={movie.title}
           onClick={handleMovieClick}
         />
