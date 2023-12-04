@@ -27,6 +27,22 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+// Get all movie reviews for a specific movie title
+router.get('/reviews/:title', async (req, res) => {
+  const movieTitle = req.params.title;
+
+  try {
+    const reviews = await MovieReview.find({ movieTitle });
+    if (!reviews || reviews.length === 0) {
+      return res.status(404).json({ message: 'No reviews found for this movie title.' });
+    }
+    res.json(reviews);
+  } catch (err) {
+    console.error('Error fetching movie reviews by title:', err);
+    res.status(500).json({ message: 'Server Error' });
+  }
+});
+
 // Create a new movie review
 router.post('/', async (req, res) => {
   const { movieTitle, username, rating, review } = req.body;

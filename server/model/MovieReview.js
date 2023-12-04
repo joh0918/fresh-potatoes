@@ -19,6 +19,9 @@ const MovieReviewSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  isFriend: {
+    type: Boolean,
+  },
   created_at: {
     type: Date,
     default: Date.now,

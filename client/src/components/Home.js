@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 import MovieCard from './MovieCard';
 import Header from './Header';
 import MovieBanner from './MovieBanner';
 import './CommonStyling.css';
 
 function Home() {
-  const navigate = useNavigate();
 
   const [movies, setMovies] = useState([]);
   const [topMovie, setTopMovie] = useState(null); 
@@ -38,20 +36,7 @@ function Home() {
     setCurrent(current => Math.min(current + 4, movies.length - 4));
   }
 
-  const getMovieTitle = (movieId) => {
-    return movies.find((movie) => movie.id === movieId).title;
-  }
-
-  const handleMovieClick = (movieId) => {
-    movies.find((movie) => movie.id === movieId);
-    console.log(`Clicked on ${getMovieTitle(movieId)}`);
-    navigate.push(`/movie/${movieId}`);
-  };
-
-  const handleBannerClick = () => {
-    console.log('Banner clicked');
-  };
-
+ 
   return (
     <div className='home'>
       <h1 className='title'>Fresh Potatoes</h1>
@@ -60,7 +45,6 @@ function Home() {
         {topMovie && (
           <MovieBanner
             movie={topMovie}
-            onClick={handleBannerClick}
           />
         )}
       </div>
@@ -71,7 +55,6 @@ function Home() {
           <MovieCard
             key={movie.id}
             movie={movie}
-            onClick={() => handleMovieClick(movie.id)}
           />
         ))}
         <button onClick={nextMovies}>→</button>
